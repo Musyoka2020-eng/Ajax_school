@@ -86,20 +86,20 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        if ($user) {
+        // $user = User::find($id);
+        // if ($user) {
 
-            return response()->json([
-                'status' => 200,
-                'user' => $user,
-            ]);
-        } else {
+        //     return response()->json([
+        //         'status' => 200,
+        //         'user' => $user,
+        //     ]);
+        // } else {
 
-            return response()->json([
-                'status' => 404,
-                'message' => 'User Not Found',
-            ]);
-        }
+        //     return response()->json([
+        //         'status' => 404,
+        //         'message' => 'User Not Found',
+        //     ]);
+        // }
     }
 
     /**

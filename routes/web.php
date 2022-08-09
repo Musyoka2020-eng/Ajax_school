@@ -35,5 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('users', UserController::class);
         Route::get('edit_user/{id}', [BackupController::class, 'edit'] );
+        Route::put('update_user/{id}', [BackupController::class, 'update'] );
+        Route::delete('delete_user/{id}', [BackupController::class, 'destroy'] );
     });
 });
